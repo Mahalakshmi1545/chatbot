@@ -1,0 +1,68 @@
+/* Container for the chatbot buttons */
+.chatbot-buttons-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color:black ; /* Light gray background */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* Container for the buttons */
+.chatbot-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px; /* Space between buttons */
+    justify-content: center;
+}
+
+/* Style for each button */
+.chatbot-buttons button {
+    padding: 20px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff; /* White text */
+    background-color: #007bff; /* Blue background */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Hover effect for buttons */
+.chatbot-buttons button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    transform: translateY(-2px); /* Slight lift */
+}
+
+/* Active effect for buttons */
+.chatbot-buttons button:active {
+    background-color: #004080; /* Even darker blue on click */
+    transform: translateY(0); /* Reset lift */
+}
+
+/* Optional: Add a different color for each button type */
+.chatbot-buttons button[onclick*="voice"] {
+    background-color: #28a745; /* Green for voice chatbot */
+}
+
+.chatbot-buttons button[onclick*="shopping"] {
+    background-color: #ffc107; /* Yellow for shopping chatbot */
+}
+
+.chatbot-buttons button[onclick*="translate"] {
+    background-color: #17a2b8; /* Teal for translate chatbot */
+}
+
+.chatbot-buttons button[onclick*="music"] {
+    background-color: #dc3545; /* Red for music chatbot */
+}
+
+.chatbot-buttons button[onclick*="image"] {
+    background-color: #6f42c1; /* Purple for image chatbot */
+}
+
+.chatbot-buttons button[onclick*="maths"] {
+    background-color: #fd7e14; /* Orange for maths chatbot */
+}

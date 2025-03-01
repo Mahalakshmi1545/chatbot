@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login & Signup</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Left Side - Login -->
+        <div class="form-container sign-in">
+            <h2>Welcome Back!</h2>
+            <p>To keep connected with us please login with your personal info</p>
+            <button class="toggle-btn" onclick="showLogin()">SIGN IN</button>
+        </div>
+
+        <!-- Right Side - Signup -->
+        <div class="form-container sign-up">
+            <h2>Create Account</h2>
+            <div class="social-icons">
+                <a href="#"><img src="facebook-icon.png" alt="Facebook"></a>
+                <a href="#"><img src="google-icon.png" alt="Google"></a>
+                <a href="#"><img src="linkedin-icon.png" alt="LinkedIn"></a>
+            </div>
+            <p>or use your email for registration</p>
+            <input type="text" id="name" placeholder="Name">
+            <input type="email" id="email" placeholder="Email">
+            <input type="password" id="password" placeholder="Password">
+            <button onclick="signup()">SIGN UP</button>
+        </div>
+    </div>
+
+    <script>
+        function signup() {
+            const name = document.getElementById("name").value;
+            const email = document.getElementById("email").value;
+            const password = document.getElementById("password").value;
+
+            if (name && email && password) {
+                localStorage.setItem("role", "user");
+                alert("Signup successful! Please log in.");
+                window.location.href = "index.html";
+            } else {
+                alert("Please fill in all fields.");
+            }
+        }
+
+        function showLogin() {
+            window.location.href = "login.html";
+        }
+    </script>
+</body>
+</html>
